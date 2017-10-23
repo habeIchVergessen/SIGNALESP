@@ -689,7 +689,7 @@ bool SignalDetectorClass::getClock()
 
 bool SignalDetectorClass::getSync()
 {
-	// Durchsuchen aller Musterpulse und prueft ob darin ein Sync Faktor enthalten ist. Anschließend wird verifiziert ob dieser Syncpuls auch im Signal nacheinander uebertragen wurde
+	// Durchsuchen aller Musterpulse und prueft ob darin ein Sync Faktor enthalten ist. AnschlieÃŸend wird verifiziert ob dieser Syncpuls auch im Signal nacheinander uebertragen wurde
 	//
 #if DEBUGDETECT > 3
 	DBG_PRINTLN("  --  Searching Sync  -- ");
@@ -1426,4 +1426,5 @@ const bool ManchesterpatternDecoder::isManchester()
 
 
 }
+
 

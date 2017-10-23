@@ -2294,3 +2294,4 @@ namespace fastdelegate {
 } // namespace fastdelegate
 
 #endif // !defined(FASTDELEGATE_H)
+

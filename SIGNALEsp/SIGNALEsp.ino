@@ -74,7 +74,7 @@
 #define FIFO_LENGTH			   255    
 #define DEBUG				   1
 
-char* update_username = "admin";  //Benutzername zum login für die OTA-Programmierung
+char* update_username = "admin";  //Benutzername zum login fÃ¼r die OTA-Programmierung
 char* update_password = "SIGNALEsp"; //Passwort
 
 char* host = "signalesp";
@@ -113,7 +113,6 @@ volatile bool blinkLED = false;
 String cmdstring = "";
 volatile unsigned long lastTime = micros();
 
-
 extern "C" {
 #include "user_interface.h"
 }
@@ -125,6 +124,8 @@ os_timer_t cronTimer;
 #define addr_features        0xff
 
 
+// prototypes
+inline void ethernetEvent();
 void ICACHE_RAM_ATTR handleInterrupt();
 void enableReceive();
 void disableReceive();
@@ -323,7 +324,7 @@ void setup() {
 
 void ICACHE_RAM_ATTR cronjob(void *pArg) {
 	 const unsigned long  duration = micros() - lastTime;
-	 if (duration > maxPulse) { //Auf Maximalwert pr�fen.
+	 if (duration > maxPulse) { //Auf Maximalwert prï¿½fen.
 		 int sDuration = maxPulse;
 		 if (isLow(PIN_RECEIVE)) { // Wenn jetzt low ist, ist auch weiterhin low
 			 sDuration = -sDuration;
@@ -936,6 +937,7 @@ void initEEPROM(void) {
   EEPROM.end(); 
   getFunctions(&musterDec.MSenabled, &musterDec.MUenabled, &musterDec.MCenabled);
 }
+
 
 
 

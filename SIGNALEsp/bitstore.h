@@ -168,3 +168,4 @@ void BitStore<bufSize>::reset()
 
 
 #endif // BITSTORE_H
+

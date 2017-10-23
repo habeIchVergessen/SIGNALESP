@@ -21,3 +21,4 @@ void WiFiVerbindung(char* update_username, char* update_password)
   DBG_PRINTLN("HTTPUpdateServer ready!");
   DBG_PRINTLN(WiFi.localIP());
 }
+
